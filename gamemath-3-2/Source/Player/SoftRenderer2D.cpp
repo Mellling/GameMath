@@ -65,7 +65,10 @@ void SoftRenderer::Update2D(float InDeltaSeconds)
 	// 게임 로직의 로컬 변수
 	static float moveSpeed = 100.f;
 
-	Vector2 inputVector = Vector2(input.GetAxis(InputAxis::XAxis), input.GetAxis(InputAxis::YAxis));
+	Vector2 inputVector = Vector2
+	(
+		input.GetAxis(InputAxis::XAxis), 
+		input.GetAxis(InputAxis::YAxis)).GetNormalize();	// GetNormalize()를 사용해 입력 벡터의 크기를 항상 1로 정규화
 	Vector2 deltaPosition = inputVector * moveSpeed * InDeltaSeconds;
 
 	// 물체의 최종 상태 설정
@@ -83,7 +86,34 @@ void SoftRenderer::Render2D()
 	DrawGizmo2D();
 
 	// 렌더링 로직의 로컬 변수
+	static float radius = 50.f;
+	static std::vector<Vector2> circles;	// 원을 구성할 점을 보관하기 위한 자료구조 vector를 선언
 
+	// 최초에 한 번(circles이 비어있을 때) 반지름보다 긴 벡터를 모아 컨테이너에 담음
+	if (circles.empty())
+	{
+		// 반지름의 정보를 활용해 원이 포함된 사각형 영역을 계산
+		// 이에 속한 벡터를 생성하기 위해 크기 1단위로 루프를 돔
+		for (float x = -radius; x <= radius; ++x)
+		{
+			for (float y = -radius; y <= radius; y++)
+			{
+				Vector2 pointToTest = Vector2(x, y);
+				// 벡터의 크기를 구할 때 제곱근을 씌우지 않은 x^2 + y^2만을 계산
+				float squaredLength = pointToTest.SizeSquared();
+				if (squaredLength <= radius * radius)
+					circles.push_back(Vector2(x, y));
+			}
+		}
+	}
+
+	// 원을 구성하는 벡터를 모두 진한 회색으로 표시
+	for (auto const& v : circles)
+	{
+		r.DrawPoint(v + currentPosition, LinearColor::DimGray);
+	}
+
+	r.PushStatisticText("Coordination : " + currentPosition.ToString());
 }
 
 // 메시를 그리는 함수
