@@ -1,0 +1,9 @@
+D:/Git/GameMath/gamemath-3-1/Project/CMakeFiles/ALL_BUILD.dir
+D:/Git/GameMath/gamemath-3-1/Project/Source/Runtime/Math/CMakeFiles/MathModule.dir
+D:/Git/GameMath/gamemath-3-1/Project/Source/Runtime/Math/CMakeFiles/ALL_BUILD.dir
+D:/Git/GameMath/gamemath-3-1/Project/Source/Runtime/Renderer/CMakeFiles/RendererModule.dir
+D:/Git/GameMath/gamemath-3-1/Project/Source/Runtime/Renderer/CMakeFiles/ALL_BUILD.dir
+D:/Git/GameMath/gamemath-3-1/Project/Source/Runtime/Engine/CMakeFiles/EngineModule.dir
+D:/Git/GameMath/gamemath-3-1/Project/Source/Runtime/Engine/CMakeFiles/ALL_BUILD.dir
+D:/Git/GameMath/gamemath-3-1/Project/Source/Player/CMakeFiles/SoftRendererPlayer.dir
+D:/Git/GameMath/gamemath-3-1/Project/Source/Player/CMakeFiles/ALL_BUILD.dir
