@@ -55,6 +55,7 @@ void SoftRenderer::LoadScene2D()
 // 게임 로직과 렌더링 로직이 공유하는 변수
 Vector2 currentPosition;
 float currentScale = 10.f;
+float currentDegree = 0.f;	// 회전 값을 공유하기 위한 변수 선언 (각도법 사용)
 
 // 게임 로직을 담당하는 함수
 void SoftRenderer::Update2D(float InDeltaSeconds)
@@ -68,14 +69,19 @@ void SoftRenderer::Update2D(float InDeltaSeconds)
 	static float scaleMin = 5.f;
 	static float scaleMax = 20.f;
 	static float scaleSpeed = 20.f;
+	static float rotateSpeed = 180.f;	// 입력에 따른 회전 변화량을 지정하는 변수 (1초에 180도 회전하도록 설정)
 
 	Vector2 inputVector = Vector2(input.GetAxis(InputAxis::XAxis), input.GetAxis(InputAxis::YAxis)).GetNormalize();
 	Vector2 deltaPosition = inputVector * moveSpeed * InDeltaSeconds;
 	float deltaScale = input.GetAxis(InputAxis::ZAxis) * scaleSpeed * InDeltaSeconds;
 
+	// W축 입력을 사용해 현재 프레임에서 입력에 따른 변화된 각도를 계산
+	float deltaDegree = input.GetAxis(InputAxis::WAxis) * rotateSpeed * InDeltaSeconds;	
+
 	// 물체의 최종 상태 설정
 	currentPosition += deltaPosition;
 	currentScale = Math::Clamp(currentScale + deltaScale, scaleMin, scaleMax);
+	currentDegree += deltaDegree;	// 최종 하트가 회전해야 할 각도를 정함
 }
 
 // 렌더링 로직을 담당하는 함수
@@ -110,12 +116,28 @@ void SoftRenderer::Render2D()
 		}
 	}
 
+	// 각도에 해당하는 sin과 cos 값 얻기
+	float sin = 0.f, cos = 0.f;
+	// GetSinCos 함수를 사용해 currentDegree 값의 sin과 cos 값을 얻어냄
+	Math::GetSinCos(sin, cos, currentDegree);	// 표준라이브러리의 sinf, cosf 함수는 로도법을 사용하지만 해당 함수는 각도법을 사용하도록 고안됨
+
 	// 각 값을 초기화한 후 색상을 증가시키면서 점에 대응
 	rad = 0.f;
 	for (auto const& v : hearts)
 	{
+		// 1. 점에 크기를 적용
+		Vector2 scaleV = v * currentScale;
+		// 2. 크기가 변한 점을 회전
+		Vector2 rotatedV = Vector2
+		(
+			scaleV.X * cos - scaleV.Y * sin, 
+			scaleV.X * sin + scaleV.Y * cos
+		);
+		// 3. 회전시킨 점을 이동
+		Vector2 translatedV = rotatedV + currentPosition;
+
 		hsv.H = rad / Math::TwoPI;
-		r.DrawPoint(v * currentScale + currentPosition, hsv.ToLinearColor());
+		r.DrawPoint(translatedV, hsv.ToLinearColor());
 		rad += increment;
 	}
 
