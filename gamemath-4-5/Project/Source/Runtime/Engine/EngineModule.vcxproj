@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{10DBB01D-6131-3123-B881-3EA808EC92AF}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>EngineModule</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Git\GameMath\gamemath-4-5\Output\Windows\Library\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">EngineModule.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">EngineModule</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Git\GameMath\gamemath-4-5\Output\Windows\Library\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">EngineModule.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">EngineModule</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Git\GameMath\gamemath-4-5\Output\Windows\Library\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">EngineModule.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">EngineModule</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Git\GameMath\gamemath-4-5\Output\Windows\Library\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">EngineModule.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">EngineModule</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public\2D;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public\3D;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\ThirdParty;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Math\Public;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Renderer\Public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;PLATFORM_WINDOWS;Windows;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;PLATFORM_WINDOWS;Windows;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public\2D;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public\3D;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\ThirdParty;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Math\Public;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Renderer\Public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public\2D;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public\3D;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\ThirdParty;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Math\Public;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Renderer\Public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public\2D;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public\3D;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\ThirdParty;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Math\Public;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Renderer\Public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;PLATFORM_WINDOWS;Windows;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;PLATFORM_WINDOWS;Windows;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public\2D;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public\3D;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\ThirdParty;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Math\Public;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Renderer\Public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public\2D;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public\3D;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\ThirdParty;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Math\Public;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Renderer\Public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public\2D;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public\3D;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\ThirdParty;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Math\Public;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Renderer\Public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;PLATFORM_WINDOWS;Windows;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;PLATFORM_WINDOWS;Windows;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public\2D;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public\3D;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\ThirdParty;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Math\Public;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Renderer\Public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public\2D;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public\3D;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\ThirdParty;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Math\Public;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Renderer\Public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public\2D;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public\3D;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\ThirdParty;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Math\Public;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Renderer\Public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;PLATFORM_WINDOWS;Windows;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;PLATFORM_WINDOWS;Windows;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public\2D;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public\3D;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\ThirdParty;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Math\Public;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Renderer\Public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public\2D;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public\3D;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\ThirdParty;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Math\Public;D:\Git\GameMath\gamemath-4-5\Source\Runtime\Renderer\Public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Precompiled.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Precompiled.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClInclude Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Precompiled.h" />
+    <ClCompile Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Private\2D\CameraObject.cpp">
+      <ObjectFileName>$(IntDir)/Private/2D/CameraObject.cpp.obj</ObjectFileName>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Precompiled.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Private\2D\GameEngine.cpp">
+      <ObjectFileName>$(IntDir)/Private/2D/GameEngine.cpp.obj</ObjectFileName>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Precompiled.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Private\2D\GameObject.cpp">
+      <ObjectFileName>$(IntDir)/Private/2D/GameObject.cpp.obj</ObjectFileName>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Precompiled.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Private\2D\Mesh.cpp">
+      <ObjectFileName>$(IntDir)/Private/2D/Mesh.cpp.obj</ObjectFileName>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Precompiled.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Private\2D\TransformComponent.cpp">
+      <ObjectFileName>$(IntDir)/Private/2D/TransformComponent.cpp.obj</ObjectFileName>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Precompiled.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Private\3D\Bone.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Precompiled.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Private\3D\CameraObject.cpp">
+      <ObjectFileName>$(IntDir)/Private/3D/CameraObject.cpp.obj</ObjectFileName>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Precompiled.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Private\3D\GameEngine.cpp">
+      <ObjectFileName>$(IntDir)/Private/3D/GameEngine.cpp.obj</ObjectFileName>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Precompiled.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Private\3D\GameObject.cpp">
+      <ObjectFileName>$(IntDir)/Private/3D/GameObject.cpp.obj</ObjectFileName>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Precompiled.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Private\3D\Mesh.cpp">
+      <ObjectFileName>$(IntDir)/Private/3D/Mesh.cpp.obj</ObjectFileName>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Precompiled.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Private\3D\TransformComponent.cpp">
+      <ObjectFileName>$(IntDir)/Private/3D/TransformComponent.cpp.obj</ObjectFileName>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Precompiled.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Private\InputManager.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Precompiled.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Private\Texture.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Precompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Precompiled.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClInclude Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public\2D\CameraObject.h" />
+    <ClInclude Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public\2D\GameEngine.h" />
+    <ClInclude Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public\2D\GameObject.h" />
+    <ClInclude Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public\2D\Mesh.h" />
+    <ClInclude Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public\2D\TransformComponent.h" />
+    <ClInclude Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public\3D\Bone.h" />
+    <ClInclude Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public\3D\CameraObject.h" />
+    <ClInclude Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public\3D\GameEngine.h" />
+    <ClInclude Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public\3D\GameObject.h" />
+    <ClInclude Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public\3D\Mesh.h" />
+    <ClInclude Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public\3D\Resources.h" />
+    <ClInclude Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public\3D\TransformComponent.h" />
+    <ClInclude Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public\EngineHeaders.h" />
+    <ClInclude Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public\EngineInterface.h" />
+    <ClInclude Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public\InputManager.h" />
+    <ClInclude Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\Public\Texture.h" />
+    <ClInclude Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\ThirdParty\Stb\stb.h" />
+    <ClInclude Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\ThirdParty\Stb\stb_c_lexer.h" />
+    <ClInclude Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\ThirdParty\Stb\stb_connected_components.h" />
+    <ClInclude Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\ThirdParty\Stb\stb_divide.h" />
+    <ClInclude Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\ThirdParty\Stb\stb_ds.h" />
+    <ClInclude Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\ThirdParty\Stb\stb_dxt.h" />
+    <ClInclude Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\ThirdParty\Stb\stb_easy_font.h" />
+    <ClInclude Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\ThirdParty\Stb\stb_herringbone_wang_tile.h" />
+    <ClInclude Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\ThirdParty\Stb\stb_image.h" />
+    <ClInclude Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\ThirdParty\Stb\stb_image_resize.h" />
+    <ClInclude Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\ThirdParty\Stb\stb_image_write.h" />
+    <ClInclude Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\ThirdParty\Stb\stb_include.h" />
+    <ClInclude Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\ThirdParty\Stb\stb_leakcheck.h" />
+    <ClInclude Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\ThirdParty\Stb\stb_perlin.h" />
+    <ClInclude Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\ThirdParty\Stb\stb_rect_pack.h" />
+    <ClInclude Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\ThirdParty\Stb\stb_sprintf.h" />
+    <ClInclude Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\ThirdParty\Stb\stb_textedit.h" />
+    <ClInclude Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\ThirdParty\Stb\stb_tilemap_editor.h" />
+    <ClInclude Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\ThirdParty\Stb\stb_truetype.h" />
+    <ClInclude Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\ThirdParty\Stb\stb_voxel_render.h" />
+    <ClInclude Include="D:\Git\GameMath\gamemath-4-5\Source\Runtime\Engine\ThirdParty\Stb\stretchy_buffer.h" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="D:\Git\GameMath\gamemath-4-5\Project\Source\Runtime\Math\MathModule.vcxproj">
+      <Project>{741AB193-0F58-3E79-A8F0-5540D917E015}</Project>
+      <Name>MathModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Git\GameMath\gamemath-4-5\Project\Source\Runtime\Renderer\RendererModule.vcxproj">
+      <Project>{F8F12F62-4272-386B-8F1A-2A094DC9D335}</Project>
+      <Name>RendererModule</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
