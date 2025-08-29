@@ -82,12 +82,13 @@ void SoftRenderer::Render2D()
 	DrawGizmo2D();
 
 	// 렌더링 로직의 로컬 변수
-	static float halfSize = 100.f;
-	static std::vector<Vector2> squares;
+	static float halfSize = 100.f;	// 정사각형의 절반 크기
+	static std::vector<Vector2> squares;	// 정사각형을 구성하는 벡터를 담을 수 있는 컨테이너 변수
 
 	// 사각형을 구성하는 점을 생성
 	if (squares.empty())
 	{
+		// 회전 후의 결과가 밀도 있게 보이기 위해 많은 점을 생성
 		for (float x = -halfSize; x <= halfSize; x += 0.25f)
 		{
 			for (float y = -halfSize; y <= halfSize; y += 0.25f)
@@ -97,11 +98,41 @@ void SoftRenderer::Render2D()
 		}
 	}
 
-	// 사각형 그리기
+	// 각도에 해당하는 sin과 cos 함수 얻기
+	float sin = 0.f, cos = 0.f;
+	Math::GetSinCos(sin, cos, currentDegree);
+
+	// 현재 화면의 크기로부터 길이를 비교할 기준양 정하기 (길이에 따라 회전량을 다르게 부여하기 위해)
+	// 화면 대각선 크기의 절반을 기준 값으로 잡고 변수 maxLength에 저장
+	static float maxLength = Vector2(_ScreenSize.X, _ScreenSize.Y).Size() * 0.5f;
+
+	// 원을 구성하는 점을 그린다.
 	HSVColor hsv(0.f, 1.f, 0.85f);
 	for (auto const& v : squares)
 	{
-		r.DrawPoint(v, hsv.ToLinearColor());
+		// 극좌표계로 변경
+		Vector2 polarV = v.ToPolarCoordinate();
+
+		// 극좌표계의 각 정보로부터 색상을 결정
+		// 극좌표계의 값을 [0, 1]로 정규화하여 색상을 지정함
+		if (polarV.Y < 0.f)
+		{
+			polarV.Y += Math::TwoPI;
+		}
+		hsv.H = polarV.Y / Math::TwoPI;
+
+		// 극좌표계의 크기 정보로부터 회전량을 결정
+		float ratio = polarV.X / maxLength;	// 해당 벡터의 길이와 maxLength의 비율 구함
+		// 선형 보간 함수에 ratio 값을 사용해
+		// 최소 1부터 5까지의 가중치 값을 구하고 이를 변수 weigth에 저장
+		float weigth = Math::Lerp(1.f, 5.f, ratio);
+
+		// 회전량에 가중치를 곱해 최종 회전량을 계산해 회전을 부여
+		polarV.Y += Math::Deg2Rad(currentDegree) * weigth;	// 중심에서 바깥으로 갈수록 많은 가중치가 부여됨
+
+		// 최종 값을 데카르트 좌표계로 변환
+		Vector2 cartesianV = polarV.ToCartesianCoordinate();
+		r.DrawPoint(cartesianV, hsv.ToLinearColor());
 	}
 
 	// 현재 각도를 화면에 출력
