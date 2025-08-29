@@ -68,11 +68,33 @@ void SoftRenderer::Update2D(float InDeltaSeconds)
 	static float scaleMin = 5.f;
 	static float scaleMax = 20.f;
 
+	static float duration = 1.5f;	// 애니메이션의 왕복 시간
+	static float elapsedTime = 0.f;	// 현재 경과 시간을 보관하는 변수
+
 	Vector2 inputVector = Vector2(input.GetAxis(InputAxis::XAxis), input.GetAxis(InputAxis::YAxis)).GetNormalize();
 	Vector2 deltaPosition = inputVector * moveSpeed * InDeltaSeconds;
 
+	// 경과 시간과 sin 함수를 활용한 [0, 1] 값의 생성
+	elapsedTime += InDeltaSeconds;	// 프레임당 경과 시간을 더해 햔재 경과 시간을 업데이트
+
+	// 나머지 값을 계산하는 Mod 함수를 사용해 
+	// 현재 경과 시간이 duration 값을 넘으면 0으로 초기화하고 다시 계산
+	elapsedTime = Math::FMod(elapsedTime, duration);	
+
+	// 왕복이 끝나 처음부터 다시 시작하는 시간의 값이 duration안데, 이에 대응되는 각의 값은 2파이
+	// 이를 참고해 현재 경과 시간 elapsedTime에 대응하는 각을 계산하고 이를 변수 currentRad에 저장
+	float currentRad = (elapsedTime / duration) * Math::TwoPI;	// 현재 시간에 대응되는 각을 계산
+
+	// sin 함수의 값은 [-1, 1] 범위를 가지는데, 선형 보간을 위해 [0, 1] 범위에 대응되도록 
+	// sin 함수에 1을 더하고 0.5를 곱한 후 이 값을 alpha에 저장
+	// alpha 값은 시간에 따라 [0, 1] 범위를 왕복하게 된다
+	float alpha = (sinf(currentRad) + 1) * 0.5f;
+
 	// 물체의 최종 상태 설정
 	currentPosition += deltaPosition;
+	// 선형 보간 함수의 세번째 인자에 0을 대입하면 최소값을, 1을 대입하면 최대값을 얻게 됨
+	// 변수 alpha 값은 시간에 따라 [0, 1] 범위를 왕복 => 시간에 따라 최소/최대값을 왕복하는 크기 값을 얻게 됨
+	currentScale = Math::Lerp(scaleMin, scaleMax, alpha);
 }
 
 // 렌더링 로직을 담당하는 함수
